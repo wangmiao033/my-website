@@ -3,28 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网站</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #3498db;
-            margin-top: 50px;
-        }
-        p {
-            color: #555;
-        }
-    </style>
-</head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的网站</title>
     <style>
         /* 样式 */
@@ -54,17 +32,25 @@
 
         .navbar a:hover {
             text-decoration: underline;
+        }
 
+        .content {
+            padding-top: 60px; /* 为了避免内容被导航栏遮挡 */
+        }
+    </style>
+</head>
 <body>
-    <h1>欢迎来到我的网站！</h1>
-    <p>这是一个通过 GitHub Pages 托管的简单网站。</p>
-</body>
-    <a href="about.html">关于我们</a>
-    <body>
-    <h1>欢迎来到我的网站！</h1>
-    <p>这是一个通过 GitHub Pages 托管的简单网站。</p>
-    <a href="about.html">关于我们</a>
-</body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact.html">联系我们</a>
+    </div>
 
+    <!-- 内容区域 -->
+    <div class="content">
+        <h1>欢迎来到我的网站！</h1>
+        <p>这里是主页的内容。</p>
+    </div>
 </body>
 </html>
