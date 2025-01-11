@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>带下拉菜单的网站</title>
     <style>
         /* 样式 */
         body {
@@ -14,6 +14,7 @@
 
         .navbar {
             background-color: #3498db;
+            overflow: hidden;
             color: white;
             padding: 10px 20px;
             position: fixed;
@@ -21,6 +22,7 @@
             left: 0;
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
 
         .navbar a {
@@ -28,14 +30,45 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 16px;
+            display: inline-block;
         }
 
         .navbar a:hover {
             text-decoration: underline;
         }
 
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #3498db;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .content {
-            padding-top: 60px; /* 为了避免内容被导航栏遮挡 */
+            padding-top: 70px; /* 避免内容被导航栏遮挡 */
         }
     </style>
 </head>
@@ -44,13 +77,21 @@
     <div class="navbar">
         <a href="index.html">首页</a>
         <a href="about.html">关于我们</a>
+        <div class="dropdown">
+            <a href="#">服务</a>
+            <div class="dropdown-content">
+                <a href="service1.html">服务一</a>
+                <a href="service2.html">服务二</a>
+                <a href="service3.html">服务三</a>
+            </div>
+        </div>
         <a href="contact.html">联系我们</a>
     </div>
 
     <!-- 内容区域 -->
     <div class="content">
         <h1>欢迎来到我的网站！</h1>
-        <p>这里是主页的内容。</p>
+        <p>这是一个带有下拉菜单的导航栏示例。</p>
     </div>
 </body>
 </html>
